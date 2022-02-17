@@ -7,6 +7,6 @@ import retrofit2.http.GET;
 import retrofit2.http.Query;
 
 public interface PixbayApi {
-    @GET("/api?key=25684975-6e2f0510cb7fb3d7709f7d7c1")
+    @GET("/api?key=25680573-99ab4b0392ec7236ffaa0c266")
     Call<PixabayResponse> getImages(@Query("q") String englishWord);
 }

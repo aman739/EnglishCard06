@@ -14,15 +14,15 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class PizaBayRepository {
+public class PixaBayRepository {
 
 
-    static PizaBayRepository pizaBayRepository;
+    static PixaBayRepository pizaBayRepository;
     public MutableLiveData<List<Hits>> listImages = new MutableLiveData<>();
 
-    public static PizaBayRepository getInstance() {
+    public static PixaBayRepository getInstance() {
         if (pizaBayRepository == null) {
-            return new PizaBayRepository();
+            return new PixaBayRepository();
         }
         return pizaBayRepository;
     }
@@ -39,7 +39,7 @@ public class PizaBayRepository {
 
             @Override
             public void onFailure(Call<PixabayResponse> call, Throwable t) {
-                Log.e("ololo", t.getMessage());
+                Log.e("olololo", t.getMessage());
 
             }
         });
