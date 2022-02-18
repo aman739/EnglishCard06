@@ -18,5 +18,6 @@ public class PixaBayViewModel extends ViewModel {
         repository.getImages(word);
         hitsMutableLiveData = repository.listImages;
         return hitsMutableLiveData;
+        
     }
 }
