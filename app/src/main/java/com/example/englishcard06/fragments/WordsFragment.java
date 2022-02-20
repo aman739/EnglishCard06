@@ -9,6 +9,7 @@ import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.englishcard06.adapter.AdapterWords;
@@ -16,6 +17,9 @@ import com.example.englishcard06.base.BaseFragment;
 import com.example.englishcard06.databinding.FragmentWordsBinding;
 import com.example.englishcard06.viewmodel.PixaBayViewModel;
 
+import dagger.hilt.android.AndroidEntryPoint;
+
+@AndroidEntryPoint
 public class WordsFragment extends BaseFragment<FragmentWordsBinding> {
 
     PixaBayViewModel viewModel;
@@ -30,12 +34,11 @@ public class WordsFragment extends BaseFragment<FragmentWordsBinding> {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        viewModel = ViewModelProviders.of(requireParentFragment()).get(PixaBayViewModel.class);
+        viewModel = new ViewModelProvider(requireActivity()).get(PixaBayViewModel.class);
         getImages();
         initAdapter();
 
     }
-
 
     private void initAdapter() {
         adapterWords = new AdapterWords();
@@ -48,7 +51,6 @@ public class WordsFragment extends BaseFragment<FragmentWordsBinding> {
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
             }
-
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -71,17 +73,12 @@ public class WordsFragment extends BaseFragment<FragmentWordsBinding> {
                                 binding.progressBar.setVisibility(View.GONE);
                                 adapterWords.setList(hits);
                                 binding.recyclerview.setAdapter(adapterWords);
-
                             }
                         });
                     }
                 }, 5000);
-
-
             }
         });
 
     }
 }
-
-

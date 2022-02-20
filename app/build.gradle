@@ -1,5 +1,6 @@
 plugins {
     id 'com.android.application'
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
@@ -57,5 +58,11 @@ dependencies {
     // ViewModel
     implementation'android.arch.lifecycle:viewmodel:1.1.1'
     implementation'android.arch.lifecycle:extensions:1.1.1'
+    //hilt
+    implementation 'com.google.dagger:hilt-android:2.41'
+    annotationProcessor 'com.google.dagger:hilt-compiler:2.41'
+    //dotsIndicator
+    implementation 'com.tbuonomo.andrui:viewpagerdotsindicator:4.1.2'
+
 
 }
