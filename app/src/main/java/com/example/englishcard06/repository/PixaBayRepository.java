@@ -18,8 +18,9 @@ import retrofit2.Response;
 
 public class PixaBayRepository {
 
-    PixbayApi api;
     public MutableLiveData<List<Hits>> listImages = new MutableLiveData<>();
+
+    PixbayApi api;
 
     @Inject
     public PixaBayRepository(PixbayApi api) {
@@ -27,7 +28,7 @@ public class PixaBayRepository {
     }
 
     public void getImages(String word) {
-       api.getImages(word).enqueue(new Callback<PixabayResponse>() {
+        api.getImages(word).enqueue(new Callback<PixabayResponse>() {
             @Override
             public void onResponse(Call<PixabayResponse> call, Response<PixabayResponse> response) {
                 if (response.isSuccessful()) {

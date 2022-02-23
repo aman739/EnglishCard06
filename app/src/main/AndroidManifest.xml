@@ -14,13 +14,13 @@
         android:theme="@style/Theme.EnglishCard06"
         android:usesCleartextTraffic="true">
         <activity
-            android:theme="@style/SplashTheme"
             android:name=".ui.MainActivity"
-            android:exported="true">
-              <intent-filter>
-                  <action android:name="android.intent.action.MAIN"/>
-                  <category android:name="android.intent.category.LAUNCHER"/>
-              </intent-filter>
+            android:exported="true"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 

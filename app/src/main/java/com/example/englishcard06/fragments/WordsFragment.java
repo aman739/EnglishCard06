@@ -4,13 +4,11 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.lifecycle.ViewModelProviders;
 
 import com.example.englishcard06.adapter.AdapterWords;
 import com.example.englishcard06.base.BaseFragment;
@@ -23,8 +21,8 @@ import dagger.hilt.android.AndroidEntryPoint;
 public class WordsFragment extends BaseFragment<FragmentWordsBinding> {
 
     PixaBayViewModel viewModel;
-    private AdapterWords adapterWords;
     Handler handler = new Handler();
+    private AdapterWords adapterWords;
 
     @Override
     public FragmentWordsBinding bind() {

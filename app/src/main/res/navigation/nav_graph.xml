@@ -3,46 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/wordsFragment">
+    app:startDestination="@id/mainBoardFragment">
+
+    <fragment
+        android:id="@+id/mainBoardFragment"
+        android:name="com.example.englishcard06.onboarding.MainBoardFragment"
+        android:label="fragment_main_board"
+        tools:layout="@layout/fragment_main_board" />
 
     <fragment
         android:id="@+id/wordsFragment"
         android:name="com.example.englishcard06.fragments.WordsFragment"
-        android:label="fragment_category"
-        tools:layout="@layout/fragment_category" />
-    <fragment
-        android:id="@+id/CategoryFragment"
-        android:name="com.example.englishcard06.fragments.CategoryFragment"
-        android:label="fragment_words"
-        tools:layout="@layout/fragment_words" />
-    <fragment
-        android:id="@+id/onboardFragment"
-        android:name="com.example.englishcard06.onboarding.OnboardFragment"
-        android:label="fragment_onboard"
-        tools:layout="@layout/fragment_onboard" />
-    <fragment
-        android:id="@+id/categoryFragment"
-        android:name="com.example.englishcard06.onboard.CategoryFragment"
-        android:label="fragment_category2"
-        tools:layout="@layout/fragment_category" />
-    <fragment
-        android:id="@+id/personalAreaFragment"
-        android:name="com.example.englishcard06.onboard.PersonalAreaFragment"
-        android:label="fragment_personal_area"
-        tools:layout="@layout/fragment_personal_area" />
-    <fragment
-        android:id="@+id/studyFragment"
-        android:name="com.example.englishcard06.onboard.StudyFragment"
-        android:label="fragment_study"
-        tools:layout="@layout/fragment_study" />
-    <fragment
-        android:id="@+id/finishFragment"
-        android:name="com.example.englishcard06.onboard.FinishFragment"
-        android:label="fragment_finish"
-        tools:layout="@layout/fragment_finish" />
-    <fragment
-        android:id="@+id/wordsFragment2"
-        android:name="com.example.englishcard06.onboard.WordsFragment"
-        android:label="fragment_words2"
-        tools:layout="@layout/fragment_words_dots" />
+        android:label="WordsFragment" />
+
 </navigation>

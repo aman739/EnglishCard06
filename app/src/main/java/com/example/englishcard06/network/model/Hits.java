@@ -1,4 +1,3 @@
-
 package com.example.englishcard06.network.model;
 
 import com.google.gson.annotations.SerializedName;
